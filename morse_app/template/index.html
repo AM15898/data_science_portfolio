@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Morse Code Converter</title>
+  </head>
+  <body>
+    <h1>Text to Morse Code Converter</h1>
+    <form method="POST">
+      <label for="user_text">Enter text:</label>
+      <input type="text" name="user_text" id="user_text" value="{{ user_text }}">
+      <button type="submit">Convert</button>
+    </form>
+    {% if morse_result %}
+      <h2>Morse Code:</h2>
+      <p>{{ morse_result }}</p>
+    {% endif %}
+  </body>
+</html>
